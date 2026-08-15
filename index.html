@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golosie | Pizzería Artesanal en Torrox Costa</title>
+  <meta name="description" content="Golosie, pizzería napolitana artesanal en el Paseo Marítimo de Torrox Costa. Pizzas, pasta casera, helados y vistas al mar. Reserva por teléfono.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Golosie | Pizzería en Torrox Costa">
+  <meta property="og:description" content="Pizza napolitana artesanal frente al mar, en el Paseo Marítimo de Torrox Costa.">
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:image" content="assets/img/hero.svg">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__main">Golosie</span>
+        <span class="logo__sub">Torrox Costa</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+          <li><a href="#carta" class="nav__link">Carta</a></li>
+          <li><a href="#galeria" class="nav__link">Galería</a></li>
+          <li><a href="#resenas" class="nav__link">Reseñas</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="tel:+34611218324" class="btn btn--primary btn--header">📞 Reservar</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <p class="hero__kicker">Pizzería &amp; Trattoria · Paseo Marítimo</p>
+      <h1 class="hero__title">Golosie</h1>
+      <p class="hero__tagline">Auténtica pizza napolitana frente al mar, en el corazón de Torrox Costa</p>
+      <div class="hero__actions">
+        <a href="tel:+34611218324" class="btn btn--primary btn--lg">📞 Reservar mesa</a>
+        <a href="#carta" class="btn btn--outline btn--lg">Ver la carta</a>
+      </div>
+    </div>
+    <a href="#nosotros" class="hero__scroll" aria-label="Bajar a la siguiente sección">↓</a>
+  </section>
+
+  <!-- ===== NOSOTROS ===== -->
+  <section class="section nosotros" id="nosotros">
+    <div class="container nosotros__grid">
+      <div class="nosotros__img">
+        <img src="assets/img/interior.svg" alt="Interior de Golosie con vistas al Paseo Marítimo" loading="lazy">
+      </div>
+      <div class="nosotros__text">
+        <p class="section__kicker">Nuestra historia</p>
+        <h2 class="section__title">Sobre Golosie</h2>
+        <p>Golosie nació con una idea sencilla: traer el sabor auténtico de la pizza napolitana al Paseo Marítimo de Torrox Costa. Elaboramos nuestra masa de forma artesanal, con largas fermentaciones, e ingredientes frescos de proximidad, para que cada pizza salga del horno con el punto justo de crujiente y esponjosidad.</p>
+        <p>Además de pizza, en Golosie encontrarás pasta casera, carnes, pescados, hamburguesas y una selección de postres, helados, crepes y waffles, ideales para disfrutar de una sobremesa con vistas al mar Mediterráneo.</p>
+        <p>Nuestra terraza en primera línea de paseo es el lugar perfecto para comer, cenar o simplemente tomar algo mientras se pone el sol sobre la Costa del Sol.</p>
+        <ul class="nosotros__badges">
+          <li>🍕 Masa de fermentación artesanal</li>
+          <li>🌊 Terraza frente al mar</li>
+          <li>🍝 Pasta casera</li>
+          <li>🍨 Postres y helados</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CARTA ===== -->
+  <section class="section carta" id="carta">
+    <div class="container">
+      <p class="section__kicker section__kicker--center">Nuestra propuesta</p>
+      <h2 class="section__title section__title--center">La Carta</h2>
+      <p class="section__intro">
+        Una selección de nuestros platos. Carta completa disponible en el local.
+      </p>
+
+      <div class="menu-tabs" id="menuTabs">
+        <button class="menu-tab is-active" data-target="entrantes">Entrantes</button>
+        <button class="menu-tab" data-target="pizzas">Pizzas</button>
+        <button class="menu-tab" data-target="pasta">Pasta &amp; Carnes</button>
+        <button class="menu-tab" data-target="postres">Postres</button>
+      </div>
+
+      <div class="menu-panels">
+        <div class="menu-panel is-active" id="entrantes">
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Antipasto de la Casa</h3>
+              <span class="menu-item__price">11,90 €</span>
+            </div>
+            <p>Selección de embutidos y quesos italianos, aceitunas y pan tostado.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Mejillones al Vino Blanco</h3>
+              <span class="menu-item__price">10,00 €</span>
+            </div>
+            <p>Mejillones frescos cocinados con vino blanco, ajo y perejil.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Caprese</h3>
+              <span class="menu-item__price">9,00 €</span>
+            </div>
+            <p>Tomate, mozzarella di bufala, albahaca fresca y aceite de oliva virgen extra.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Bruschetta Calabrese</h3>
+              <span class="menu-item__price">5,00 €</span>
+            </div>
+            <p>Pan tostado con tomate, ajo, orégano y un toque picante.</p>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="pizzas">
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Margherita</h3>
+              <span class="menu-item__price">9,50 €</span>
+            </div>
+            <p>Tomate, mozzarella fior di latte, albahaca fresca y aceite de oliva.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Diavola</h3>
+              <span class="menu-item__price">11,50 €</span>
+            </div>
+            <p>Tomate, mozzarella, salami picante y guindilla.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Quattro Formaggi</h3>
+              <span class="menu-item__price">12,50 €</span>
+            </div>
+            <p>Mozzarella, gorgonzola, parmesano y provolone.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Golosie Gourmet</h3>
+              <span class="menu-item__price">14,90 €</span>
+            </div>
+            <p>Burrata, jamón de bellota, rúcula y tomates cherry. Nuestra especialidad de la casa.</p>
+          </div>
+          <p class="menu-note">* Consulta la carta completa de pizzas clásicas y gourmet en el restaurante.</p>
+        </div>
+
+        <div class="menu-panel" id="pasta">
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Lasagna della Casa</h3>
+              <span class="menu-item__price">12,90 €</span>
+            </div>
+            <p>Lasaña tradicional boloñesa horneada con bechamel casera.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Pasta al Salmón</h3>
+              <span class="menu-item__price">13,50 €</span>
+            </div>
+            <p>Pasta fresca con salmón, nata y eneldo.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Entrecot a la Plancha</h3>
+              <span class="menu-item__price">18,00 €</span>
+            </div>
+            <p>Con guarnición de patatas y verduras de temporada.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Hamburguesa Golosie</h3>
+              <span class="menu-item__price">12,00 €</span>
+            </div>
+            <p>Carne 100% vacuno, queso, bacon, lechuga, tomate y salsa de la casa.</p>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="postres">
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Tiramisú Casero</h3>
+              <span class="menu-item__price">5,50 €</span>
+            </div>
+            <p>Receta tradicional italiana con mascarpone y café.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Crepe de Nutella</h3>
+              <span class="menu-item__price">5,00 €</span>
+            </div>
+            <p>Con nata y frutos rojos.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Waffle Belga</h3>
+              <span class="menu-item__price">6,00 €</span>
+            </div>
+            <p>Con helado, sirope y frutas de temporada.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__head">
+              <h3>Copa de Helado Artesanal</h3>
+              <span class="menu-item__price">4,50 €</span>
+            </div>
+            <p>Distintos sabores, elaboración propia.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="carta__disclaimer">Precios y platos orientativos — pendientes de confirmar con la carta oficial actualizada.</p>
+    </div>
+  </section>
+
+  <!-- ===== GALERÍA ===== -->
+  <section class="section galeria" id="galeria">
+    <div class="container">
+      <p class="section__kicker section__kicker--center">Un vistazo</p>
+      <h2 class="section__title section__title--center">Galería</h2>
+      <p class="section__intro">Sustituye estas imágenes de ejemplo por tus propias fotos en <code>assets/img/</code>.</p>
+
+      <div class="gallery-grid">
+        <a class="gallery-item" href="assets/img/gallery-1.svg" target="_blank" rel="noopener">
+          <img src="assets/img/gallery-1.svg" alt="Pizza artesanal recién horneada" loading="lazy">
+        </a>
+        <a class="gallery-item" href="assets/img/gallery-2.svg" target="_blank" rel="noopener">
+          <img src="assets/img/gallery-2.svg" alt="Terraza de Golosie con vistas al mar" loading="lazy">
+        </a>
+        <a class="gallery-item" href="assets/img/gallery-3.svg" target="_blank" rel="noopener">
+          <img src="assets/img/gallery-3.svg" alt="Interior acogedor de Golosie" loading="lazy">
+        </a>
+        <a class="gallery-item" href="assets/img/gallery-4.svg" target="_blank" rel="noopener">
+          <img src="assets/img/gallery-4.svg" alt="Postres artesanales de Golosie" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESEÑAS ===== -->
+  <section class="section resenas" id="resenas">
+    <div class="container">
+      <p class="section__kicker section__kicker--center">Lo que dicen de nosotros</p>
+      <h2 class="section__title section__title--center">Reseñas de Google</h2>
+      <p class="section__intro">La satisfacción de nuestros clientes es nuestra mayor recompensa.:</p>
+
+      <div class="reviews-grid" id="reviewsGrid">
+        <article class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">"Visitamos este establecimiento para ver un partido de fútbol y comer algo. Nos encantó la comida, las bebidas y el personal. Les deseamos mucho éxito en su negocio."</p>
+          <p class="review-card__author">— Nataliia</p>
+        </article>
+        <article class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">"La camarera muy atenta y amable, la comida buenisima siempre vengo aquí. Mi lugar fav para todo🤍"</p>
+          <p class="review-card__author">-Selena Pierri</p>
+        </article>
+        <article class="review-card">
+          <div class="review-card__stars">★★★★☆</div>
+          <p class="review-card__text">"5 estrellas y porque no hay más.
+Un estupendo sitio para merendar, tomar una copa o un helado.
+Batidos de helado, crepes, gofres, cafés, tés y un largo etcétera. Tienen una carta muy amplia.
+Yo siempre que voy me pido un batido de helado con nata que, además, lleva un donette incorporado. Una merienda espectacular.
+Han cambiado el donette por un donut gigante de azúcar, una pasada.
+Solo tienes que probarlo y alucinaras.
+Recomendable mil por mil."</p>
+          <p class="review-card__author">— Pepe Bero</p>
+        </article>
+      </div>
+
+      <div class="reviews-cta">
+        <a href="https://www.google.com/maps/search/?api=1&query=Golosie%20Torrox%20Costa" target="_blank" rel="noopener" class="btn btn--outline">Ver reseñas en Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="section contacto" id="contacto">
+    <div class="container contacto__grid">
+      <div class="contacto__info">
+        <p class="section__kicker">Visítanos</p>
+        <h2 class="section__title">Contacto &amp; Ubicación</h2>
+
+        <ul class="contact-list">
+          <li>
+            <span class="contact-list__icon">📍</span>
+            <div>
+              <strong>Dirección</strong>
+              <p>Urb. Centro Internacional, Paseo Marítimo, Bloque 75, Bajo 11<br>29793 Torrox Costa, Málaga</p>
+            </div>
+          </li>
+          <li>
+            <span class="contact-list__icon">📞</span>
+            <div>
+              <strong>Teléfono</strong>
+              <p><a href="tel:+34611218324">611 21 83 24</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="contact-list__icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:sesepizzata1512@icloud.com">sesepizzata1512@icloud.com</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="contact-list__icon">🕒</span>
+            <div>
+              <strong>Horario</strong>
+              <p>Lun–Vie y Dom: 9:00–22:00<br>Sáb: 9:00–22:30</p>
+            </div>
+          </li>
+        </ul>
+
+        <a href="tel:+34611218324" class="btn btn--primary btn--lg contacto__cta">📞 Llamar y reservar</a>
+      </div>
+
+      <div class="contacto__map">
+        <iframe
+          title="Mapa de ubicación de Golosie en Torrox Costa"
+          src="https://www.google.com/maps?q=36.72788,-3.9596(Golosie)&output=embed"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo__main">Golosie</span>
+        <p>Paseo Marítimo, Torrox Costa</p>
+      </div>
+
+      <div class="footer__social" aria-label="Redes sociales">
+        <!-- Sustituye estos "#" por tus enlaces reales de Instagram / Facebook -->
+        <a href="#" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
+      </div>
+
+      <p class="footer__copy">© <span id="year"></span> Golosie — Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="tel:+34611218324" class="fab-reserve" aria-label="Reservar por teléfono">📞</a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

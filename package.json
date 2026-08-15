@@ -1,0 +1,9 @@
+{
+  "name": "golosie-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web profesional para Pizzería Golosie - Torrox Costa",
+  "scripts": {
+    "dev": "npx serve . -l 3000"
+  }
+}
