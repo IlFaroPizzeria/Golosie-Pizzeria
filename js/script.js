@@ -43,6 +43,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Acordeón de Desayuno & Meriendas
+  const accordionItems = document.querySelectorAll('.accordion-item');
+
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    const panel = item.querySelector('.accordion-panel');
+
+    header.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
+
+      // Cierra los demás acordeones (solo uno abierto a la vez)
+      accordionItems.forEach(other => {
+        if (other !== item) {
+          other.classList.remove('is-open');
+          other.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+          other.querySelector('.accordion-panel').style.maxHeight = null;
+        }
+      });
+
+      if (isOpen) {
+        item.classList.remove('is-open');
+        header.setAttribute('aria-expanded', 'false');
+        panel.style.maxHeight = null;
+      } else {
+        item.classList.add('is-open');
+        header.setAttribute('aria-expanded', 'true');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+
   // Header: sombra al hacer scroll
   const header = document.getElementById('header');
   const onScroll = () => {

@@ -10,9 +10,10 @@
   <meta property="og:title" content="Golosie | Pizzería en Torrox Costa">
   <meta property="og:description" content="Pizza napolitana artesanal frente al mar, en el Paseo Marítimo de Torrox Costa.">
   <meta property="og:type" content="restaurant.restaurant">
-  <meta property="og:image" content="assets/img/hero.svg">
+  <meta property="og:image" content="assets/img/logo.png">
 
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -24,8 +25,11 @@
   <header class="site-header" id="header">
     <div class="container header__inner">
       <a href="#inicio" class="logo">
-        <span class="logo__main">Golosie</span>
-        <span class="logo__sub">Torrox Costa</span>
+        <img src="assets/img/logo.png" alt="Golosie" class="logo__img">
+        <span class="logo__text">
+          <span class="logo__main">Golosie</span>
+          <span class="logo__sub">Torrox Costa</span>
+        </span>
       </a>
 
       <nav class="nav" id="nav">
@@ -127,10 +131,10 @@
             <div class="menu-item__head"><h3>Bruschetta Calabrese</h3><span class="menu-item__price">7,90 €</span></div>
           </div>
           <div class="menu-item">
-            <div class="menu-item__head"><h3>Bruschetta Ortolana</h3></div>
+            <div class="menu-item__head"><h3>Bruschetta Ortolana</h3><span class="menu-item__price">7,90 €</span></div>
           </div>
           <div class="menu-item">
-            <div class="menu-item__head"><h3>Provolone</h3></div>
+            <div class="menu-item__head"><h3>Provolone</h3><span class="menu-item__price">9,00 €</span></div>
           </div>
         </div>
 
@@ -393,46 +397,89 @@
         Crepes, gofres, pancakes, bocadillos, sándwiches y croissants — nuestra propuesta para desayunar o merendar frente al mar.
       </p>
 
-      <div class="menu-panels">
-        <div class="menu-panel is-active" id="desayuno-panel">
-          <h4 class="menu-subhead">Crepes</h4>
-          <div class="menu-item"><div class="menu-item__head"><h3>Azúcar Moreno</h3><span class="menu-item__price">4,00 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Nutella</h3><span class="menu-item__price">4,50 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Dulce de Leche</h3><span class="menu-item__price">4,50 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Miel con Nueces</h3><span class="menu-item__price">4,50 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Fresas con Nata</h3><span class="menu-item__price">5,50 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Helado a Elegir</h3><span class="menu-item__price">5,50 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Nutella y Helado</h3><span class="menu-item__price">6,50 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Plátano, Nutella y Fresas</h3><span class="menu-item__price">6,50 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Jamón York y Queso</h3><span class="menu-item__price">5,90 €</span></div></div>
+      <div class="accordion" id="desayunoAccordion">
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false">
+            <span>Crepes</span>
+            <span class="accordion-icon">▾</span>
+          </button>
+          <div class="accordion-panel">
+            <div class="accordion-panel__inner">
+              <div class="menu-item"><div class="menu-item__head"><h3>Azúcar Moreno</h3><span class="menu-item__price">4,00 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Nutella</h3><span class="menu-item__price">4,50 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Dulce de Leche</h3><span class="menu-item__price">4,50 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Miel con Nueces</h3><span class="menu-item__price">4,50 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Fresas con Nata</h3><span class="menu-item__price">5,50 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Helado a Elegir</h3><span class="menu-item__price">5,50 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Nutella y Helado</h3><span class="menu-item__price">6,50 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Plátano, Nutella y Fresas</h3><span class="menu-item__price">6,50 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Jamón York y Queso</h3><span class="menu-item__price">5,90 €</span></div></div>
+            </div>
+          </div>
+        </div>
 
-          <h4 class="menu-subhead">Gofres</h4>
-          <div class="menu-item"><div class="menu-item__head"><h3>Azúcar Glass</h3><span class="menu-item__price">3,50 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Nutella</h3><span class="menu-item__price">4,00 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Dulce de Leche</h3><span class="menu-item__price">4,00 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Helado a Elegir</h3><span class="menu-item__price">4,50 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Nutella y Helado</h3><span class="menu-item__price">5,00 €</span></div></div>
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false">
+            <span>Gofres</span>
+            <span class="accordion-icon">▾</span>
+          </button>
+          <div class="accordion-panel">
+            <div class="accordion-panel__inner">
+              <div class="menu-item"><div class="menu-item__head"><h3>Azúcar Glass</h3><span class="menu-item__price">3,50 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Nutella</h3><span class="menu-item__price">4,00 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Dulce de Leche</h3><span class="menu-item__price">4,00 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Helado a Elegir</h3><span class="menu-item__price">4,50 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Nutella y Helado</h3><span class="menu-item__price">5,00 €</span></div></div>
+            </div>
+          </div>
+        </div>
 
-          <h4 class="menu-subhead">American Pancakes</h4>
-          <div class="menu-item"><div class="menu-item__head"><h3>Fresas, Plátano, Sirope de Arce y Nata</h3><span class="menu-item__price">6,50 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Nutella y Nata Montada</h3><span class="menu-item__price">5,90 €</span></div></div>
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false">
+            <span>American Pancakes</span>
+            <span class="accordion-icon">▾</span>
+          </button>
+          <div class="accordion-panel">
+            <div class="accordion-panel__inner">
+              <div class="menu-item"><div class="menu-item__head"><h3>Fresas, Plátano, Sirope de Arce y Nata</h3><span class="menu-item__price">6,50 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Nutella y Nata Montada</h3><span class="menu-item__price">5,90 €</span></div></div>
+            </div>
+          </div>
+        </div>
 
-          <h4 class="menu-subhead">Bocadillos &amp; Sándwiches <span class="menu-subhead__note">(baguette +1 €)</span></h4>
-          <div class="menu-item"><div class="menu-item__head"><h3>Mixto</h3><span class="menu-item__price">4,00 €</span></div><p>Jamón y queso.</p></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Hawái</h3><span class="menu-item__price">5,00 €</span></div><p>Jamón, queso y piña.</p></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Atún y Tomate</h3><span class="menu-item__price">4,50 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Serrano</h3><span class="menu-item__price">4,50 €</span></div><p>Jamón serrano y tomate.</p></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Tostada</h3><span class="menu-item__price">3,50 €</span></div><p>Aceite y tomate, o mermelada y mantequilla.</p></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Bacon y Queso Fundido</h3><span class="menu-item__price">5,00 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Tonno</h3><span class="menu-item__price">5,00 €</span></div><p>Atún, queso, tomate y mayonesa.</p></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Americano</h3><span class="menu-item__price">5,30 €</span></div><p>Bacon, lechuga, tomate y mayonesa.</p></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Mediterráneo</h3><span class="menu-item__price">4,70 €</span></div><p>Atún, mayonesa y pepino.</p></div>
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false">
+            <span>Bocadillos &amp; Sándwiches <span class="accordion-header__note">(baguette +1 €)</span></span>
+            <span class="accordion-icon">▾</span>
+          </button>
+          <div class="accordion-panel">
+            <div class="accordion-panel__inner">
+              <div class="menu-item"><div class="menu-item__head"><h3>Mixto</h3><span class="menu-item__price">4,00 €</span></div><p>Jamón y queso.</p></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Hawái</h3><span class="menu-item__price">5,00 €</span></div><p>Jamón, queso y piña.</p></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Atún y Tomate</h3><span class="menu-item__price">4,50 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Serrano</h3><span class="menu-item__price">4,50 €</span></div><p>Jamón serrano y tomate.</p></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Tostada</h3><span class="menu-item__price">3,50 €</span></div><p>Aceite y tomate, o mermelada y mantequilla.</p></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Bacon y Queso Fundido</h3><span class="menu-item__price">5,00 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Tonno</h3><span class="menu-item__price">5,00 €</span></div><p>Atún, queso, tomate y mayonesa.</p></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Americano</h3><span class="menu-item__price">5,30 €</span></div><p>Bacon, lechuga, tomate y mayonesa.</p></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Mediterráneo</h3><span class="menu-item__price">4,70 €</span></div><p>Atún, mayonesa y pepino.</p></div>
+            </div>
+          </div>
+        </div>
 
-          <h4 class="menu-subhead">Croissants</h4>
-          <div class="menu-item"><div class="menu-item__head"><h3>Solo</h3><span class="menu-item__price">2,50 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Mixto</h3><span class="menu-item__price">4,00 €</span></div><p>Jamón y queso.</p></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Nutella, Mermelada o Mantequilla</h3><span class="menu-item__price">3,00 €</span></div></div>
-          <div class="menu-item"><div class="menu-item__head"><h3>Desayuno Español</h3><span class="menu-item__price">3,00 €</span></div><p>Churros + chocolate caliente, café o Nutella.</p></div>
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false">
+            <span>Croissants</span>
+            <span class="accordion-icon">▾</span>
+          </button>
+          <div class="accordion-panel">
+            <div class="accordion-panel__inner">
+              <div class="menu-item"><div class="menu-item__head"><h3>Solo</h3><span class="menu-item__price">2,50 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Mixto</h3><span class="menu-item__price">4,00 €</span></div><p>Jamón y queso.</p></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Nutella, Mermelada o Mantequilla</h3><span class="menu-item__price">3,00 €</span></div></div>
+              <div class="menu-item"><div class="menu-item__head"><h3>Desayuno Español</h3><span class="menu-item__price">3,00 €</span></div><p>Churros + chocolate caliente, café o Nutella.</p></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -554,8 +601,11 @@ Recomendable mil por mil."</p>
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <span class="logo__main">Golosie</span>
-        <p>Paseo Marítimo, Torrox Costa</p>
+        <img src="assets/img/logo.png" alt="Golosie" class="footer__logo">
+        <div>
+          <span class="logo__main">Golosie</span>
+          <p>Paseo Marítimo, Torrox Costa</p>
+        </div>
       </div>
 
       <div class="footer__social" aria-label="Redes sociales">
