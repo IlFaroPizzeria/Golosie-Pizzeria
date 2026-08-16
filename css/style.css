@@ -1,7 +1,7 @@
 /* =========================================
    Golosie — Estilo Clásico Italiano
    ========================================= */
-
+ 
 :root {
   --rojo: #a5261b;
   --rojo-oscuro: #7d1c14;
@@ -13,19 +13,19 @@
   --texto: #2b2320;
   --texto-suave: #5c5148;
   --borde: #e6d8bd;
-
+ 
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Poppins', system-ui, sans-serif;
-
+ 
   --radius: 10px;
   --shadow: 0 10px 30px rgba(43, 35, 32, 0.12);
   --transition: 0.25s ease;
 }
-
+ 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
 html { scroll-behavior: smooth; }
-
+ 
 body {
   font-family: var(--font-body);
   color: var(--texto);
@@ -33,18 +33,18 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-
+ 
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
-
+ 
 .container {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 24px;
 }
-
+ 
 /* ===== Botones ===== */
 .btn {
   display: inline-flex;
@@ -60,24 +60,24 @@ ul { list-style: none; }
   white-space: nowrap;
 }
 .btn:hover { transform: translateY(-2px); }
-
+ 
 .btn--primary {
   background: var(--rojo);
   color: #fff;
   box-shadow: 0 6px 18px rgba(165, 38, 27, 0.35);
 }
 .btn--primary:hover { background: var(--rojo-oscuro); }
-
+ 
 .btn--outline {
   background: transparent;
   border-color: var(--verde);
   color: var(--verde);
 }
 .btn--outline:hover { background: var(--verde); color: #fff; }
-
+ 
 .btn--lg { padding: 15px 30px; font-size: 1rem; }
 .btn--header { display: none; }
-
+ 
 /* ===== Header ===== */
 .site-header {
   position: fixed;
@@ -87,7 +87,7 @@ ul { list-style: none; }
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--borde);
 }
-
+ 
 .header__inner {
   display: flex;
   align-items: center;
@@ -95,7 +95,7 @@ ul { list-style: none; }
   padding: 14px 24px;
   gap: 20px;
 }
-
+ 
 .logo {
   display: flex;
   align-items: center;
@@ -127,7 +127,7 @@ ul { list-style: none; }
   color: var(--verde);
   margin-top: 2px;
 }
-
+ 
 .nav { display: none; }
 .nav__list { display: flex; gap: 28px; }
 .nav__link {
@@ -148,7 +148,7 @@ ul { list-style: none; }
 }
 .nav__link:hover { color: var(--rojo); }
 .nav__link:hover::after { width: 100%; }
-
+ 
 .nav-toggle {
   background: none;
   border: none;
@@ -169,13 +169,13 @@ ul { list-style: none; }
 .nav-toggle.is-active span:nth-child(1) { transform: translateY(11px) rotate(45deg); }
 .nav-toggle.is-active span:nth-child(2) { opacity: 0; }
 .nav-toggle.is-active span:nth-child(3) { transform: translateY(-11px) rotate(-45deg); }
-
+ 
 @media (min-width: 900px) {
   .nav { display: block; }
   .btn--header { display: inline-flex; }
   .nav-toggle { display: none; }
 }
-
+ 
 @media (max-width: 899px) {
   .nav {
     display: block;
@@ -196,7 +196,7 @@ ul { list-style: none; }
   .nav__list li { border-bottom: 1px solid var(--borde); }
   .nav__link { display: block; padding: 14px 0; }
 }
-
+ 
 /* ===== Hero ===== */
 .hero {
   position: relative;
@@ -206,15 +206,22 @@ ul { list-style: none; }
   justify-content: center;
   text-align: center;
   color: #fff;
-  background: linear-gradient(160deg, var(--verde-oscuro) 0%, var(--verde) 45%, var(--rojo-oscuro) 100%);
+  background: linear-gradient(135deg,
+    var(--verde-oscuro) 0%,
+    var(--verde) 24%,
+    var(--crema) 50%,
+    var(--rojo) 76%,
+    var(--rojo-oscuro) 100%);
   padding: 120px 24px 80px;
 }
 .hero__overlay {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08), transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.06), transparent 45%);
+    radial-gradient(circle at 12% 18%, rgba(31, 56, 35, 0.65), transparent 55%),
+    radial-gradient(circle at 50% 45%, rgba(250, 243, 230, 0.45), transparent 60%),
+    radial-gradient(circle at 88% 82%, rgba(125, 28, 20, 0.65), transparent 55%),
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.22), transparent 65%);
   pointer-events: none;
 }
 .hero__content { position: relative; z-index: 1; max-width: 720px; }
@@ -249,7 +256,7 @@ ul { list-style: none; }
 }
 .hero .btn--outline { border-color: #fff; color: #fff; }
 .hero .btn--outline:hover { background: #fff; color: var(--verde-oscuro); }
-
+ 
 .hero__scroll {
   position: absolute;
   bottom: 28px; left: 50%;
@@ -263,7 +270,7 @@ ul { list-style: none; }
   0%, 100% { transform: translate(-50%, 0); }
   50% { transform: translate(-50%, 8px); }
 }
-
+ 
 /* ===== Sections genéricas ===== */
 .section { padding: 96px 0; }
 .section__kicker {
@@ -295,7 +302,7 @@ ul { list-style: none; }
   border-radius: 4px;
   font-size: 0.85em;
 }
-
+ 
 /* ===== Nosotros ===== */
 .nosotros { background: var(--crema); }
 .nosotros__grid {
@@ -323,17 +330,17 @@ ul { list-style: none; }
   font-size: 0.9rem;
   font-weight: 500;
 }
-
+ 
 @media (min-width: 860px) {
   .nosotros__grid { grid-template-columns: 1fr 1.1fr; }
 }
-
+ 
 /* ===== Carta ===== */
 .carta__pdf-cta {
   text-align: center;
   margin-bottom: 32px;
 }
-
+ 
 .menu-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -355,7 +362,7 @@ ul { list-style: none; }
 }
 .menu-tab:hover { background: var(--verde); color: #fff; }
 .menu-tab.is-active { background: var(--rojo); color: #fff; border-color: var(--rojo); }
-
+ 
 .menu-panel {
   display: none;
   grid-template-columns: 1fr;
@@ -364,11 +371,11 @@ ul { list-style: none; }
   margin: 0 auto;
 }
 .menu-panel.is-active { display: grid; }
-
+ 
 @media (min-width: 700px) {
   .menu-panel { grid-template-columns: 1fr 1fr; }
 }
-
+ 
 .menu-subhead {
   grid-column: 1 / -1;
   font-family: var(--font-display);
@@ -387,7 +394,7 @@ ul { list-style: none; }
   text-transform: none;
   letter-spacing: 0;
 }
-
+ 
 .menu-simple-list {
   grid-column: 1 / -1;
   display: flex;
@@ -408,7 +415,7 @@ ul { list-style: none; }
   font-weight: 600;
   white-space: nowrap;
 }
-
+ 
 .menu-item {
   border-bottom: 1px dashed var(--borde);
   padding-bottom: 14px;
@@ -431,7 +438,7 @@ ul { list-style: none; }
   white-space: nowrap;
 }
 .menu-item p { font-size: 0.9rem; color: var(--texto-suave); }
-
+ 
 .menu-note {
   grid-column: 1 / -1;
   font-size: 0.85rem;
@@ -439,7 +446,7 @@ ul { list-style: none; }
   font-style: italic;
   text-align: center;
 }
-
+ 
 .carta__disclaimer {
   text-align: center;
   margin-top: 40px;
@@ -447,7 +454,7 @@ ul { list-style: none; }
   color: var(--texto-suave);
   font-style: italic;
 }
-
+ 
 /* ===== Galería ===== */
 .gallery-grid {
   display: grid;
@@ -467,14 +474,14 @@ ul { list-style: none; }
   transition: transform 0.4s ease;
 }
 .gallery-item:hover img { transform: scale(1.06); }
-
+ 
 @media (min-width: 700px) {
   .gallery-grid { grid-template-columns: repeat(4, 1fr); }
 }
-
+ 
 /* ===== Desayuno & Meriendas (acordeón) ===== */
 .desayuno { background: var(--crema); }
-
+ 
 .accordion {
   max-width: 760px;
   margin: 0 auto;
@@ -482,14 +489,14 @@ ul { list-style: none; }
   flex-direction: column;
   gap: 14px;
 }
-
+ 
 .accordion-item {
   background: var(--marfil);
   border: 1px solid var(--borde);
   border-radius: var(--radius);
   overflow: hidden;
 }
-
+ 
 .accordion-header {
   width: 100%;
   display: flex;
@@ -515,7 +522,7 @@ ul { list-style: none; }
   color: var(--texto-suave);
   margin-left: 6px;
 }
-
+ 
 .accordion-icon {
   color: var(--rojo);
   font-size: 1rem;
@@ -524,7 +531,7 @@ ul { list-style: none; }
 }
 .accordion-item.is-open .accordion-icon { transform: rotate(180deg); }
 .accordion-item.is-open .accordion-header { background: var(--crema-osc); }
-
+ 
 .accordion-panel {
   max-height: 0;
   overflow: hidden;
@@ -538,11 +545,11 @@ ul { list-style: none; }
   border-top: 1px solid var(--borde);
   padding-top: 18px;
 }
-
+ 
 @media (min-width: 640px) {
   .accordion-panel__inner { grid-template-columns: 1fr 1fr; }
 }
-
+ 
 /* ===== Reseñas ===== */
 .resenas { background: var(--crema); }
 .reviews-grid {
@@ -560,13 +567,13 @@ ul { list-style: none; }
 .review-card__stars { color: #e0a52c; font-size: 1.1rem; margin-bottom: 12px; }
 .review-card__text { font-style: italic; color: var(--texto-suave); margin-bottom: 14px; }
 .review-card__author { font-weight: 600; font-size: 0.9rem; }
-
+ 
 .reviews-cta { text-align: center; margin-top: 40px; }
-
+ 
 @media (min-width: 700px) {
   .reviews-grid { grid-template-columns: repeat(3, 1fr); }
 }
-
+ 
 /* ===== Contacto ===== */
 .contacto__grid {
   display: grid;
@@ -579,18 +586,18 @@ ul { list-style: none; }
 .contact-list strong { display: block; margin-bottom: 4px; color: var(--verde-oscuro); }
 .contact-list p { color: var(--texto-suave); font-size: 0.95rem; }
 .contact-list a:hover { color: var(--rojo); }
-
+ 
 .contacto__map {
   min-height: 320px;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
 }
-
+ 
 @media (min-width: 860px) {
   .contacto__grid { grid-template-columns: 1fr 1fr; }
 }
-
+ 
 /* ===== Footer ===== */
 .footer {
   background: var(--verde-oscuro);
@@ -626,11 +633,11 @@ ul { list-style: none; }
 }
 .footer__social-link:hover { opacity: 1; text-decoration: underline; }
 .footer__copy { font-size: 0.78rem; opacity: 0.6; }
-
+ 
 @media (min-width: 700px) {
   .footer__inner { flex-direction: row; justify-content: space-between; text-align: left; }
 }
-
+ 
 /* ===== Botón flotante de reserva (móvil) ===== */
 .fab-reserve {
   position: fixed;
@@ -648,7 +655,8 @@ ul { list-style: none; }
   transition: transform var(--transition);
 }
 .fab-reserve:hover { transform: scale(1.08); }
-
+ 
 @media (min-width: 900px) {
   .fab-reserve { display: none; }
 }
+ 
